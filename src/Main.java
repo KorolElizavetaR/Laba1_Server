@@ -29,11 +29,11 @@ public class Main {
 
         Scanner in = new Scanner(socket.getInputStream());
         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-
+        System.out.print("Input awaited....");
         int A = in.nextInt();
-        //int B = in.nextInt();
+        int B = in.nextInt();
 
-        out.println(A);
+        out.println(gcd(A, B));
         socket.close();
     }
 }
